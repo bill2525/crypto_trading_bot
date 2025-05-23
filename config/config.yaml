@@ -1,0 +1,22 @@
+default_exchange: coinbase
+symbols:
+  - BTC-USD
+  - ETH-USD
+telegram:
+  alerts: true
+  commands: true
+risk:
+  max_position: 10000   # USD
+  max_daily_loss: 500   # USD
+strategies:
+  momentum:
+    enabled: true
+    lookback: 14
+  rsi:
+    enabled: false
+  macd:
+    enabled: false
+ai:
+  predictor:
+    type: lstm
+    lookback: 60
