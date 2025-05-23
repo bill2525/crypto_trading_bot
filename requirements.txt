@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic
+aiohttp
+aiogram
+python-dotenv
+pyyaml
+pandas
+numpy
+scikit-learn
+torch
+keyring
