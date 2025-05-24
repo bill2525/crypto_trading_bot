@@ -12,7 +12,6 @@ class CoinbaseWrapper(ExchangeWrapper):
     def __init__(self):
         self.api_key = settings.coinbase_api_key
         self.api_secret = settings.coinbase_api_secret
-        self.passphrase = settings.coinbase_passphrase
 
     def _sign(self, timestamp: str, method: str, request_path: str, body: str = "") -> str:
         message = f"{timestamp}{method}{request_path}{body}".encode()
@@ -29,7 +28,6 @@ class CoinbaseWrapper(ExchangeWrapper):
             "CB-ACCESS-KEY": self.api_key,
             "CB-ACCESS-SIGN": signature,
             "CB-ACCESS-TIMESTAMP": timestamp,
-            "CB-ACCESS-PASSPHRASE": self.passphrase,
             "Content-Type": "application/json",
         }
 
