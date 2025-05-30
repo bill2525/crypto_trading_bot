@@ -1,3 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+print("✅ Coinbase API Key:", os.getenv("COINBASE_API_KEY"))
 from fastapi import FastAPI
 from bot.dashboard.api import app as dashboard_app
 
